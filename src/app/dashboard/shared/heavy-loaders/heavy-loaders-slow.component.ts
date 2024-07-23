@@ -15,12 +15,11 @@ export class HeavyLoadersSlowComponent {
 
   @Input({ required: true }) cssClass!: string;
 
-
   constructor() {
 
     const start = Date.now();
     while( Date.now() - start < 3000 ) {}
 
-    console.log('Cargado');
+    console.log('Loading');
   }
 }
