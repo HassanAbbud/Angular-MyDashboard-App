@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, input, output } from '@angular/core';
+import { Product } from '../../../../interfaces/product.interface';
 
 @Component({
   selector: 'app-product-card',
@@ -8,7 +9,13 @@ import { Component, Input } from '@angular/core';
   styles: ``
 })
 export class ProductCardComponent {
-  @Input()
-  public productId: number = 0;
+  // @Input()
+  // public productId: Product = 0;
+  public product = input.required<Product>();
 
+  public onIncrementQuantity = output<number>();
+
+  public incrementQuantity (){
+    this.onIncrementQuantity.emit(this.product().quantity + 1);
+  }
 }
