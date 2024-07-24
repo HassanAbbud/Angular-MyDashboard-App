@@ -73,6 +73,14 @@ export const routes: Routes = [
           )
       },
       {
+        path: 'inputs-outputs',
+        title: 'Inputs Outputs',
+        loadComponent: () =>
+          import('./dashboard/pages/inputs-outputs/inputs-outputs.component').then(
+            (c) => c.InputsOutputsComponent
+          )
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'control-flow'
