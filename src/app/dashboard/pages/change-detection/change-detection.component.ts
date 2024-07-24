@@ -40,7 +40,7 @@ export class ChangeDetectionComponent {
           return {...value};
         })
 
-        console.log('Hecho');
+        console.log('Done');
     }, 3000);
 
 
