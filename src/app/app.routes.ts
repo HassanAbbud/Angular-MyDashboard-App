@@ -81,6 +81,14 @@ export const routes: Routes = [
           )
       },
       {
+        path: 'material',
+        title: 'Angular Material',
+        loadComponent: () =>
+          import('./dashboard/pages/material/material.component').then(
+            (c) => c.MaterialComponent
+          )
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'control-flow'
